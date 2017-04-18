@@ -157,6 +157,24 @@ class BlogPostController: BaseTableViewController, UIImagePickerControllerDelega
         }
     }
     
+    private func darkenImage(_ image: UIImage) -> UIImage? {
+       
+        guard let inputImage = CIImage(image: image),
+            let filter = CIFilter(name: "CIExposureAdjust") else { return nil }
+        
+        // The inputEV value on the CIFilter adjusts exposure (negative values darken, positive values brighten)
+        filter.setValue(inputImage, forKey: "inputImage")
+        filter.setValue(-2.0, forKey: "inputEV")
+        
+        // Break early if the filter was not a success (.outputImage is optional in Swift)
+        guard let filteredImage = filter.outputImage else { return nil }
+        
+        let context = CIContext(options: nil)
+        let outputImage = UIImage(cgImage: context.createCGImage(filteredImage, from: filteredImage.extent)!)
+        
+        return outputImage
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         var image = info[UIImagePickerControllerOriginalImage] as? UIImage
         let url = info[UIImagePickerControllerReferenceURL] as! URL
@@ -166,7 +184,10 @@ class BlogPostController: BaseTableViewController, UIImagePickerControllerDelega
         dismiss(animated: true, completion: nil)
         
         if addHeader {
-            let imageData = UIImageJPEGRepresentation(image!, 0.6)
+            
+            let darkImage = darkenImage(image!)
+            
+            let imageData = UIImageJPEGRepresentation(darkImage!, 0.6)
             
             let imageURL = URL(fileURLWithPath: NSTemporaryDirectory() + self.headerFileName())
             try! imageData?.write(to: imageURL)
