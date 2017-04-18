@@ -13,6 +13,10 @@
 		70EA2F131EA59BA10095BAA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70EA2F121EA59BA10095BAA2 /* Assets.xcassets */; };
 		70EA2F161EA59BA10095BAA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70EA2F141EA59BA10095BAA2 /* LaunchScreen.storyboard */; };
 		70EA2F211EA59BA10095BAA2 /* PCTHikerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA2F201EA59BA10095BAA2 /* PCTHikerTests.swift */; };
+		70EA2F2D1EA59DB40095BAA2 /* BlogPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA2F2C1EA59DB40095BAA2 /* BlogPostController.swift */; };
+		70EA2F2F1EA5A12E0095BAA2 /* GeneratedPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA2F2E1EA5A12E0095BAA2 /* GeneratedPostController.swift */; };
+		70EA2F311EA5A2100095BAA2 /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA2F301EA5A2100095BAA2 /* SegueHandler.swift */; };
+		70EA2F331EA5C7400095BAA2 /* ImageFixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA2F321EA5C7400095BAA2 /* ImageFixer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		70EA2F1C1EA59BA10095BAA2 /* PCTHikerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCTHikerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EA2F201EA59BA10095BAA2 /* PCTHikerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCTHikerTests.swift; sourceTree = "<group>"; };
 		70EA2F221EA59BA10095BAA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70EA2F2C1EA59DB40095BAA2 /* BlogPostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPostController.swift; sourceTree = "<group>"; };
+		70EA2F2E1EA5A12E0095BAA2 /* GeneratedPostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedPostController.swift; sourceTree = "<group>"; };
+		70EA2F301EA5A2100095BAA2 /* SegueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
+		70EA2F321EA5C7400095BAA2 /* ImageFixer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFixer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,10 @@
 				70EA2F121EA59BA10095BAA2 /* Assets.xcassets */,
 				70EA2F141EA59BA10095BAA2 /* LaunchScreen.storyboard */,
 				70EA2F171EA59BA10095BAA2 /* Info.plist */,
+				70EA2F2C1EA59DB40095BAA2 /* BlogPostController.swift */,
+				70EA2F2E1EA5A12E0095BAA2 /* GeneratedPostController.swift */,
+				70EA2F301EA5A2100095BAA2 /* SegueHandler.swift */,
+				70EA2F321EA5C7400095BAA2 /* ImageFixer.swift */,
 			);
 			path = PCTHiker;
 			sourceTree = "<group>";
@@ -146,6 +158,7 @@
 				TargetAttributes = {
 					70EA2F071EA59BA10095BAA2 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = WJMKDS4DY7;
 						ProvisioningStyle = Automatic;
 					};
 					70EA2F1B1EA59BA10095BAA2 = {
@@ -199,6 +212,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70EA2F2D1EA59DB40095BAA2 /* BlogPostController.swift in Sources */,
+				70EA2F311EA5A2100095BAA2 /* SegueHandler.swift in Sources */,
+				70EA2F331EA5C7400095BAA2 /* ImageFixer.swift in Sources */,
+				70EA2F2F1EA5A12E0095BAA2 /* GeneratedPostController.swift in Sources */,
 				70EA2F0E1EA59BA10095BAA2 /* ViewController.swift in Sources */,
 				70EA2F0C1EA59BA10095BAA2 /* AppDelegate.swift in Sources */,
 			);
@@ -339,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WJMKDS4DY7;
 				INFOPLIST_FILE = PCTHiker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Randall.PCTHiker;
@@ -351,6 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WJMKDS4DY7;
 				INFOPLIST_FILE = PCTHiker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Randall.PCTHiker;
